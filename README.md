@@ -1,8 +1,6 @@
 # Accurate
 Using social media to find optimal sources
 
-#### Note
-
 ## Building
 This project is made of a few different components:
 1. Crawler
