@@ -65,6 +65,7 @@ Whats the point of a backend without a front end‽ This is hosted on a server t
 * CSS
 * Javascript
 * JSON
+* Figma
 
 ```bash
 <TODO>
