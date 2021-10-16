@@ -32,7 +32,14 @@ impl Default for Post {
 
 /// Processes a post. Returns the contense of the post, along with
 /// related posts
-pub fn process_post(url: String) -> Post {
+pub async fn process_post(url: String) -> Post {
+    let body = super::download_body(url).await.unwrap();
+    let document = select::document::Document::from(body.as_str());
+
+    for post in document.find(select::predicate::Class("css-901oao css-16my406 r-poiln3 r-bcqeeo r-qvutc0")) {
+        println!("{:?}", post);
+    }
+
     Post::default()
 }
 

@@ -4,7 +4,6 @@ use super::process;
 use std::time;
 use std::iter::FromIterator;
 use std::collections::{HashMap, HashSet};
-use std::sync::{Arc, RwLock};
 
 use log::{info, error};
 use futures::future;
