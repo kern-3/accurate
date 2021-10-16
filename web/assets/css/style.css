@@ -132,7 +132,75 @@ body {
   border-radius: 4px;
   border: 1px solid #d7d7d7;
   font-family: "Source Code Pro", monospace;
-  letter-spacing: -.02rem;
+  letter-spacing: -0.02rem;
   font-weight: 400;
   font-style: italic;
+}
+
+/* Post Input Form */
+.postInputForm {
+  width: 600px;
+  height: 600px;
+  margin-top: -600px;
+}
+
+.inputBox {
+  width: 1060px;
+  background: #ffefe2;
+  padding: 40px;
+  border-radius: 30px;
+  height: 40vh;
+  margin-top: 15px;
+  margin-left: 150px;
+  border: 1px solid #eba68070;
+}
+
+.inputBoxTitle img {
+  max-width: 21px;
+}
+
+.inputBoxTitle h2 {
+  font-size: 25px;
+  font-weight: 600;
+  color: #000;
+  margin-left: 8px;
+  letter-spacing: -0.04rem;
+}
+
+.inputBox .inputBoxContent {
+  margin: 10px 0;
+}
+
+.inputBoxContent p {
+  font-size: 15px;
+}
+
+.inputBoxContent ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 7px;
+  margin: 12px 0;
+  border-radius: 5px;
+  border: 1px solid #eba68070;
+}
+
+.inputBoxContent ul input {
+  flex: 1;
+  padding: 5px;
+  border: none;
+  outline: none;
+  background: #ffefe2;
+  font-size: 16px;
+}
+
+.submitButton {
+  background-color: #f8d6ba;
+  border-radius: 7px;
+  font-size: 17px;
+  margin-top: 20px;
+  padding: 0.85rem;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-family: Poppins;
 }
