@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-y: hidden;
 }
 
 html,
@@ -13,15 +14,16 @@ body {
   background-color: #fff;
   font-family: Poppins;
   font-size: 16px;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
 }
 
 /* Main Wrapper */
 .wrapper {
   display: flex;
-  justify-content: center;
-  width: 100%;
-  min-height: 100vh;
+  max-width: 1063px;
+  /* justify-content: center; */
+
+  height: 40vh;
 }
 
 /* SideBar */
@@ -54,7 +56,9 @@ body {
   display: flex;
   position: absolute;
   top: 0;
+  flex-direction: row;
   left: 100px;
+  /* max-width: 0%; */
 }
 
 /* Hashtag Box 1 */
@@ -63,8 +67,9 @@ body {
   background: #e6f5f9;
   padding: 40px;
   border-radius: 30px;
-  height: 30vh;
+  min-height: 30vh;
   margin: 50px;
+  margin-bottom: auto;
   border: 1px solid #a2a5ed70;
 }
 
@@ -99,7 +104,7 @@ body {
   background: #effcef;
   padding: 40px;
   border-radius: 30px;
-  height: 30vh;
+  min-height: 30vh;
   margin: 50px;
   border: 1px solid #aad9b094;
   margin-left: 10px !important;
@@ -139,18 +144,18 @@ body {
 
 /* Post Input Form */
 .postInputForm {
-  width: 600px;
-  height: 600px;
-  margin-top: -600px;
+  /* position: absolute; */
+  /* height: 38vh; */
+  margin: auto;
 }
-
 .inputBox {
-  width: 1060px;
+  width: 1063px;
   background: #ffefe2;
   padding: 40px;
   border-radius: 30px;
-  height: 40vh;
-  margin-top: 15px;
+  min-height: 38vh;
+  /* margin-right: 20px; */
+  margin-top: 1rem;
   margin-left: 150px;
   border: 1px solid #eba68070;
 }
@@ -176,6 +181,7 @@ body {
 }
 
 .inputBoxContent ul {
+  min-height: 10vh;
   display: flex;
   flex-wrap: wrap;
   padding: 7px;
@@ -191,6 +197,7 @@ body {
   outline: none;
   background: #ffefe2;
   font-size: 16px;
+  font-family: Poppins;
 }
 
 .submitButton {
@@ -198,7 +205,7 @@ body {
   border-radius: 7px;
   font-size: 17px;
   margin-top: 20px;
-  padding: 0.85rem;
+  padding: 15px;
   border: none;
   cursor: pointer;
   transition: 0.3s ease;
