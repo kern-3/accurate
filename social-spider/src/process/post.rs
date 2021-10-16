@@ -37,19 +37,8 @@ impl Default for Post {
 /// related posts
 pub async fn process_post(url: String) -> Post {
     info!("getting");
-    let body = super::download_body(url).await.unwrap();
-
-    info!("parsing");
-    let document = Document::from(body.as_str());
-
-    info!("selecting");
-    /* document.find(Attr("role", "article"))
-        // .filter_map(|n| n.attr("href"))
-        .for_each(|x| println!("{:?}", x));
-
-        */
-
-    println!("{:?}", document);
+    let resp = super::get_response(url).await;
+    let body = super::download_body(resp).await.unwrap_or("NO BODY".to_owned());
 
     Post::default()
 }

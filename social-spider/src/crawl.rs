@@ -20,10 +20,10 @@ pub struct State {
 }
 
 impl State {
-    pub fn new(starting_url: String) -> Self {
+    pub fn new(starting_id: String) -> Self {
         Self {
             post_queue: HashSet::from_iter(vec![
-                starting_url,
+                starting_id,
             ]),
 
             source_queue: HashMap::new(),
@@ -43,10 +43,10 @@ pub async fn crawl<'a>(matches: &ArgMatches<'a>) {
         let mut source_handles = vec![];
 
         // Spwan the post processes for this epoch
-        for url in state.post_queue.clone() {
+        for id in state.post_queue.clone() {
             post_handles.push(
                 tokio::spawn(async move {
-                    process::post::process_post(url).await
+                    process::post::process_post(id).await
                 })
             );
         }
@@ -96,5 +96,7 @@ pub async fn crawl<'a>(matches: &ArgMatches<'a>) {
         info!("Successfully completed epoch {:8} in {} seconds!", epoch_number, epoch_time.elapsed().as_secs());
         epoch_number += 1;
         epoch_time = time::Instant::now();
+
+        return;
     }
 }
