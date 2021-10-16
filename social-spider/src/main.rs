@@ -28,8 +28,8 @@ async fn main() {
                  .default_value("metadata_data.json"))
             .arg(Arg::with_name("start")
                  .short("s")
-                 .long("starting-url")
-                 .default_value("https://twitter.com/UN/status/1448770842091995140?s=20"))
+                 .long("starting-id")
+                 .default_value("1448770842091995140"))
         ).get_matches();
 
     // Match against the subcommands

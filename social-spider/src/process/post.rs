@@ -1,5 +1,8 @@
 use super::source::Source;
 
+use log::info;
+use select::{document::Document, predicate::{Attr, Name}};
+
 pub struct Post {
     pub url: String,
     pub contense: String,
@@ -33,12 +36,20 @@ impl Default for Post {
 /// Processes a post. Returns the contense of the post, along with
 /// related posts
 pub async fn process_post(url: String) -> Post {
+    info!("getting");
     let body = super::download_body(url).await.unwrap();
-    let document = select::document::Document::from(body.as_str());
 
-    for post in document.find(select::predicate::Class("css-901oao css-16my406 r-poiln3 r-bcqeeo r-qvutc0")) {
-        println!("{:?}", post);
-    }
+    info!("parsing");
+    let document = Document::from(body.as_str());
+
+    info!("selecting");
+    /* document.find(Attr("role", "article"))
+        // .filter_map(|n| n.attr("href"))
+        .for_each(|x| println!("{:?}", x));
+
+        */
+
+    println!("{:?}", document);
 
     Post::default()
 }

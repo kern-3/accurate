@@ -6,7 +6,7 @@ use log::error;
 
 /// Downloads the body of a URL
 pub async fn download_body(url: String) -> Option<String> {
-    let client = Client::new();
+    let client = Client::builder().build::<_, hyper::Body>(hyper_tls::HttpsConnector::new());
     let uri = url.parse::<hyper::Uri>().expect("Bad URL, failed to parse.");
     let resp = client.get(uri).await.expect("Failed to get URL.");
 

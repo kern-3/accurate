@@ -46,7 +46,7 @@ pub async fn crawl<'a>(matches: &ArgMatches<'a>) {
         for url in state.post_queue.clone() {
             post_handles.push(
                 tokio::spawn(async move {
-                    process::post::process_post(url)
+                    process::post::process_post(url).await
                 })
             );
         }
