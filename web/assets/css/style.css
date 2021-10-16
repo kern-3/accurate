@@ -5,7 +5,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-y: hidden;
 }
 
 html,
@@ -64,21 +63,23 @@ body {
 /* Hashtag Box 1 */
 .hashBox1 {
   width: 500px;
-  background: #e6f5f9;
-  padding: 40px;
+  background: #52ff4f2e;
+  padding: 55px;
   border-radius: 30px;
-  min-height: 30vh;
+  min-height: 35vh;
   margin: 50px;
   margin-bottom: auto;
-  border: 1px solid #a2a5ed70;
+  border: 1px solid #a7e9a6a1;
 }
 
 .title h2 {
   font-size: 25px;
+  text-align: left;
   font-weight: 600;
   color: #000;
   margin-left: 8px;
   letter-spacing: -0.04rem;
+  margin-bottom: 15px;
 }
 
 .hashBox1 .content {
@@ -95,18 +96,18 @@ body {
   padding: 7px;
   margin: 12px 0;
   border-radius: 5px;
-  border: 1px solid #a2a5ed70;
+  border: 1px solid #a7e9a6a1;
 }
 
 /* Hashtag Box 2 */
 .hashBox2 {
   width: 500px;
-  background: #effcef;
-  padding: 40px;
+  background: #ffefe2;
+  padding: 55px;
   border-radius: 30px;
-  min-height: 30vh;
+  min-height: 35vh;
   margin: 50px;
-  border: 1px solid #aad9b094;
+  border: 1px solid #f6cfb7;
   margin-left: 10px !important;
 }
 
@@ -120,7 +121,7 @@ body {
   padding: 7px;
   margin: 12px 0;
   border-radius: 5px;
-  border: 1px solid #aad9b094;
+  border: 1px solid #f6cfb7;
 }
 
 /* Code Blocks */
@@ -150,14 +151,14 @@ body {
 }
 .inputBox {
   width: 1063px;
-  background: #ffefe2;
-  padding: 40px;
+  background: rgb(225 230 255);
+  padding: 55px;
   border-radius: 30px;
   min-height: 38vh;
   /* margin-right: 20px; */
-  margin-top: 1rem;
+  margin-top: 3rem;
   margin-left: 150px;
-  border: 1px solid #eba68070;
+  border: 1px solid rgb(93 107 181 / 28%);
 }
 
 .inputBoxTitle img {
@@ -187,7 +188,7 @@ body {
   padding: 7px;
   margin: 12px 0;
   border-radius: 5px;
-  border: 1px solid #eba68070;
+  border: 1px solid rgb(93 107 181 / 28%);
 }
 
 .inputBoxContent ul input {
@@ -195,13 +196,13 @@ body {
   padding: 5px;
   border: none;
   outline: none;
-  background: #ffefe2;
+  background: rgb(225 230 255);
   font-size: 16px;
   font-family: Poppins;
 }
 
 .submitButton {
-  background-color: #f8d6ba;
+  background-color: rgb(187 196 241);
   border-radius: 7px;
   font-size: 17px;
   margin-top: 20px;
@@ -210,4 +211,53 @@ body {
   cursor: pointer;
   transition: 0.3s ease;
   font-family: Poppins;
+}
+
+.asideBar {
+  position: absolute;
+  top: 50px;
+  right: 70px;
+  min-height: 77.7vh;
+  width: 570px;
+  border-radius: 25px;
+  background-color: #f4f6fa;
+  border: 1px solid #d7d8db;
+  z-index: 0;
+}
+
+.circle {
+  margin-top: 15px;
+}
+
+.accuracySection .circle,
+.accuracySection .circle {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.accuracySection .percentage {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: #fff;
+  line-height: 130px;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 10px;
+  position: absolute;
+  z-index: 100;
+  font-weight: 700;
+  font-size: 2em;
+}
+
+.accuracySectionHead {
+  font-size: 30px;
+  font-weight: 600;
+  color: #000;
+  margin-left: 8px;
+  letter-spacing: -0.05rem;
+  text-align: center;
+  margin-top: 50px;
 }
