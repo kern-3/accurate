@@ -5,7 +5,7 @@
     Accurate
   <br>
 </h1>
-<p align="center">No longer will you be forced to disern truth from fiction! Thanks to NLP and psycology, now you can sit back, relax, and rest easy knowing <b>Accurate</b> is keeping you correctly informed by assisting you in determining what is trustworthy and what is not.
+<p align="center">No longer will you be forced to discern truth from fiction! Thanks to NLP and Psychology, now you can sit back, relax, and rest easy knowing <b>Accurate</b> is keeping you correctly informed by assisting you in determining what is trustworthy and what is not.
 <br>
 </p>
 
