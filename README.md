@@ -23,10 +23,7 @@ We've also built a web application to enable users to engage with our tool, whic
 
 # How we built it
 This project is made of a few different components:
-1. Crawler
-2. NLP
-3. Backend
-4. Frontend
+
 - ***Crawler:*** Rust, Asynchronous processing (Tokio + Hyper), Web scraping Twitter, JSON
 - ***AI & NLP:*** Natural Language Sentiment Analysis, Python, Keras, Lots of homegrown Data
 - ***Backend:*** Rust, Asynchronous processing (Tokio + Hyper), Data aggregation, REST Arch.
