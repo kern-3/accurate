@@ -48,14 +48,18 @@ cargo build --release
 
 ## NLP (natural language processing)
 The Natural Language Processing aspect of this project is one of the most critical parts. It should only be needed to run once per group of crawler output data. This is built in Python, so you can run it as normal (but download the dependencies first!).
-* Natural Language Sentiment Analysis 
-* Python
-* Keras
+
+* Natural Language Processing 
+* Python (Tensorflow, Pandas, NLTK)
 * R (ggplot)
 * Lots of homegrown data
+
+
+First, the raw data is analyzed using data science approaches and cleaned so that it can be processed by the model. Then, all the titles are converted using a PorterStemmer and Stopwords to ensure only the most meaningful words are there. The data are one hot encoded and then trained through a Deep Learning model with an Embedding, LSTM, and numerous Dense layers.
+
 ```bash
 sudo pip3 -r requirements.txt
-python3 accurate-nlp.py
+python3 optimal.py
 
 # View the help message for invocation.
 ```
