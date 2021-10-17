@@ -51,6 +51,7 @@ The Natural Language Processing aspect of this project is one of the most critic
 * Natural Language Sentiment Analysis 
 * Python
 * Keras
+* R (ggplot)
 * Lots of homegrown data
 ```bash
 sudo pip3 -r requirements.txt
