@@ -102,7 +102,7 @@ body {
 /* Hashtag Box 2 */
 .hashBox2 {
   width: 500px;
-  background: #ffefe2;
+  background: #fde0e0;
   padding: 55px;
   border-radius: 30px;
   min-height: 35vh;
@@ -151,7 +151,7 @@ body {
 }
 .inputBox {
   width: 1063px;
-  background: rgb(225 230 255);
+  background: rgb(230 234 255);
   padding: 55px;
   border-radius: 30px;
   min-height: 38vh;
@@ -196,21 +196,26 @@ body {
   padding: 5px;
   border: none;
   outline: none;
-  background: rgb(225 230 255);
+  background: rgb(230 234 255);
   font-size: 16px;
   font-family: Poppins;
+  color: #000;
 }
 
 .submitButton {
-  background-color: rgb(187 196 241);
+  background-color: rgb(201 210 255);
+  border: 1px solid rgb(93 107 181 / 28%);
   border-radius: 7px;
-  font-size: 17px;
+  font-size: 18px;
   margin-top: 20px;
   padding: 15px;
-  border: none;
   cursor: pointer;
   transition: 0.3s ease;
   font-family: Poppins;
+}
+
+.submitButton:hover {
+  background-color: rgb(186 196 251);
 }
 
 .asideBar {
@@ -220,8 +225,8 @@ body {
   min-height: 77.7vh;
   width: 570px;
   border-radius: 25px;
-  background-color: #f4f6fa;
-  border: 1px solid #d7d8db;
+  background-color: #ffffe1;
+  border: 1px solid #e0e0a1;
   z-index: 0;
 }
 
@@ -250,6 +255,7 @@ body {
   z-index: 100;
   font-weight: 700;
   font-size: 2em;
+  border: 1px solid #e0e0a1;
 }
 
 .accuracySectionHead {
