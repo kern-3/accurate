@@ -9,13 +9,30 @@
 <br>
 </p>
 
+# Inspiration
+We were motivated to create a tool to try to discern the difference between what is trustworthy and what is not after observing the widespread misuse of social media and the spread of fake news via social media. Your Aunt Velma will no longer be able to claim that Bonobos are using 5G to spread poisons into millions of people's drinking water! Doesn't it sound fantastic...?
 
-# Building
+# What it does
+Accurate is a tool that can help you figure out which online sources are the least trustworthy. This is accomplished by gathering information on which sources are related to which social media posts (in this case, Twitter). After this information is gathered, NLP is used to identify basic intent, and the result is skewed by the popularity of the source. Following that, the data would be traced back to the social media site, and some factors might be linked to identifiers (e.g. hashtags).
+### • Data Collection
+A bot will be used to start with one post and then go on to others, collecting information along the way. After that, sources are gathered, and all data is converted to a format that the Data Analyzing engine can understand.
+### • Data Analysing
+Using Natural Language Processing to first determine a source's purpose, then biassing it with metadata acquired during data collection. Data is looped back to social media, where identifiers (hashtags) are assigned a trustworthiness grade.
+### • Data Visualisation
+We've also built a web application to enable users to engage with our tool, which provides the user with accuracy of specific posts and hashtags, as well as posts related to the user's post in a visually appealing manner.
+
+# How we built it
 This project is made of a few different components:
 1. Crawler
 2. NLP
 3. Backend
 4. Frontend
+- ***Crawler:*** Rust, Asynchronous processing (Tokio + Hyper), Web scraping Twitter, JSON
+- ***AI & NLP:*** Natural Language Sentiment Analysis, Python, Keras, Lots of homegrown Data
+- ***Backend:*** Rust, Asynchronous processing (Tokio + Hyper), Data aggregation, REST Arch.
+- ***Frontend:*** HTML, CSS, Javascript, JSON
+- ***Pitch Deck:*** Figma
+
 
 ## Crawler
 This is the peice that grabs social media posts and sources, and bundles them into a file that the NLP software. The crawler is built in Rust, so you can just use the `cargo` utility that we all know and love :)
@@ -71,5 +88,18 @@ Whats the point of a backend without a front end‽ This is hosted on a server t
 cd web
 # Open the index.html file
 ```
+# Challenges we ran into
+One issue we encountered was obtaining the enormous amount of data we required. We concluded that using already gathered data would be against the spirit of the competition, so we opted to collect our own. We discovered that Web Scraping Twitter was the ideal tool for the job because of a combination of incredibly fast networking rates and a highly parallel processor.
+
+# Accomplishments that we're proud of
+This is our (kern3’s) first project ! As a result, we're pleased to be capable of doing anything like this. We're also pleased with how we divided the tasks among ourselves which turned out to be very efficient.
+
+# What we learned
+We got a lot of experience in how to aggregate data, and how to connect different systems together, especially with so many different languages interacting with each other.
+
+# What's next for Accurate 
+Given the time (and possible financial backing), we would love to package this technology into a browser extension, for easier, inline, and informed social media interaction.
+We'd also like to expand our reach to various social media sites and check for the accuracy of the information shared there too.
+
 # Hackathon
 This project was created with ❤️ for the _2021 Treasure Hacks Hackathon_.
