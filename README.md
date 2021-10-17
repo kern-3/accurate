@@ -5,8 +5,16 @@
     Accurate
   <br>
 </h1>
-<p align="center">No longer will you be forced to discern truth from fiction! Thanks to NLP and Psychology, now you can sit back, relax, and rest easy knowing <b>Accurate</b> is keeping you correctly informed by assisting you in determining what is trustworthy and what is not.
+
+No longer will you be forced to discern truth from fiction! Thanks to NLP and Psychology, now you can sit back, relax, and rest easy knowing <b>Accurate</b>, a tool which is keeping you correctly informed by assisting you in determining what is trustworthy and what is not.
 <br>
+<p align="center">
+  <a href="#inspiration">Inspiration</a> •
+  <a href="#what-it-does">What it does</a> •
+  <a href="#how-we-built-it">How we built it</a> •
+  <a href="#challenges-we-ran-into">Challenges we ran into</a> •
+  <a href="#accomplishments-that-were-proud-of">Accomplishments that we're proud of</a> •
+  <a href="#what-we-learned">What we learned</a> 
 </p>
 
 # Inspiration
@@ -14,22 +22,37 @@ We were motivated to create a tool to try to discern the difference between what
 
 # What it does
 Accurate is a tool that can help you figure out which online sources are the least trustworthy. This is accomplished by gathering information on which sources are related to which social media posts (in this case, Twitter). After this information is gathered, NLP is used to identify basic intent, and the result is skewed by the popularity of the source. Following that, the data would be traced back to the social media site, and some factors might be linked to identifiers (e.g. hashtags).
-### • Data Collection
+<!-- ### • Data Collection
 A bot will be used to start with one post and then go on to others, collecting information along the way. After that, sources are gathered, and all data is converted to a format that the Data Analyzing engine can understand.
 ### • Data Analysing
 Using Natural Language Processing to first determine a source's purpose, then biassing it with metadata acquired during data collection. Data is looped back to social media, where identifiers (hashtags) are assigned a trustworthiness grade.
 ### • Data Visualisation
-We've also built a web application to enable users to engage with our tool, which provides the user with accuracy of specific posts and hashtags, as well as posts related to the user's post in a visually appealing manner.
+We've also built a web application to enable users to engage with our tool, which provides the user with accuracy of specific posts and hashtags, as well as posts related to the user's post in a visually appealing manner. -->
+
+
+- **Data Collection:** A bot will be used to start with one post and then go on to others, collecting information along the way. After that, sources are gathered, and all data is converted to a format that the Data Analyzing engine can understand.
+
+
+- **Data Analysing:** Using Natural Language Processing to first determine a source's purpose, then biassing it with metadata acquired during data collection. Data is looped back to social media, where identifiers (hashtags) are assigned a trustworthiness grade.
+
+
+- **Data Visualisation:** We've also built a web application to enable users to engage with our tool, which provides the user with accuracy of specific posts and hashtags, as well as posts related to the user's post in a visually appealing manner.
 
 # How we built it
 This project is made of a few different components:
 
 - ***Crawler:*** Rust, Asynchronous processing (Tokio + Hyper), Web scraping Twitter, JSON
-- ***AI & NLP:*** Natural Language Sentiment Analysis, Python, Keras,R (ggplot), Lots of homegrown Data
+- ***AI & NLP:*** Natural Language Sentiment Analysis, Python (Tensorflow, Pandas, NLTK), R (ggplot), Lots of homegrown Data
 - ***Backend:*** Rust, Asynchronous processing (Tokio + Hyper), Data aggregation, REST Arch.
 - ***Frontend:*** HTML, CSS, Javascript, JSON
 - ***Pitch Deck:*** Figma
 
+## Cloning repo
+
+```
+git clone https://github.com/kern-3/accurate.git
+cd accurate/
+```
 
 ## Crawler
 This is the peice that grabs social media posts and sources, and bundles them into a file that the NLP software. The crawler is built in Rust, so you can just use the `cargo` utility that we all know and love :)
@@ -79,7 +102,7 @@ cargo build --release
 ```
 
 ## Frontend
-Whats the point of a backend without a front end‽ This is hosted on a server that the [accuracy.news](accuracy.news) domain points to. To host it on your local computer, do this!
+Whats the point of a backend without a front end‽ This is hosted on a server that the [accuracy.netlify.app](https://accuracy.netlify.app) domain points to. To host it on your local computer, do this!
 * HTML
 * CSS
 * Javascript
