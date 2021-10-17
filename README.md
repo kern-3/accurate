@@ -68,7 +68,8 @@ Whats the point of a backend without a front end‽ This is hosted on a server t
 * Figma
 
 ```bash
-<TODO>
+cd web
+# Open the index.html file
 ```
 # Hackathon
 This project was created with ❤️ for the _2021 Treasure Hacks Hackathon_.
