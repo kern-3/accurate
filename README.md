@@ -25,7 +25,7 @@ We've also built a web application to enable users to engage with our tool, whic
 This project is made of a few different components:
 
 - ***Crawler:*** Rust, Asynchronous processing (Tokio + Hyper), Web scraping Twitter, JSON
-- ***AI & NLP:*** Natural Language Sentiment Analysis, Python, Keras, Lots of homegrown Data
+- ***AI & NLP:*** Natural Language Sentiment Analysis, Python, Keras,R (ggplot), Lots of homegrown Data
 - ***Backend:*** Rust, Asynchronous processing (Tokio + Hyper), Data aggregation, REST Arch.
 - ***Frontend:*** HTML, CSS, Javascript, JSON
 - ***Pitch Deck:*** Figma
@@ -51,6 +51,7 @@ The Natural Language Processing aspect of this project is one of the most critic
 * Natural Language Sentiment Analysis 
 * Python
 * Keras
+* R (ggplot)
 * Lots of homegrown data
 ```bash
 sudo pip3 -r requirements.txt
