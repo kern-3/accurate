@@ -1,0 +1,141 @@
+```{r}
+
+library(dplyr)
+library(readr)
+library(ggplot2)
+library(gridExtra)
+```
+
+
+
+```{r}
+
+df <- read_csv("data/train.csv")
+```
+
+
+```{r}
+head(df)
+```
+
+```{r}
+summary(df)
+```
+
+
+
+```{r}
+
+na_values_names = names(df)
+na_values_total = vector()
+na_values_val = vector()
+
+
+count = 1
+for(i in names(df)){
+    na_values_total[count] = nrow(df[names(df)[count]])
+    na_values_val[count] = sum(is.na(df[names(df)[count]]))
+    count = count + 1
+}
+
+
+na_values = data.frame(na_values_names, na_values_total, na_values_val)
+names(na_values) = c("Category", "Total", "NAValues")
+
+na_values
+
+
+naViz <- ggplot(data=na_values, aes(x=Category)) +
+       geom_bar(aes(y=NAValues), stat = "identity", alpha = 0.5,fill="blue") +
+       geom_bar(aes(y=Total), stat="identity", alpha=0.4, fill="red") +
+       ggtitle("NA Values Distribution (w/ Total)")
+
+
+
+naViz2 <- ggplot(data=na_values, aes(x=Category)) +
+       geom_bar(aes(y=NAValues), stat = "identity", alpha = 0.5,fill="blue") +
+       ggtitle("NA Values Distribution (w/o Total)")
+
+
+
+grid.arrange(naViz, naViz2)
+```
+
+```{r}
+
+#TITLE WORD LENGTH
+
+
+num_words <- vector()
+count <- 1
+for(i in df$title){
+
+    num_words[count] = sapply(strsplit(i, " "), length)
+
+
+    count = count + 1
+
+}
+
+count_df = data.frame(num_words)
+names(count_df) = c("Word")
+
+
+wordViz <- ggplot(data = count_df, aes(x = Word)) +
+       geom_histogram(binwidth=5, color="black") +
+       ggtitle("Number of Words Distribution (Title)")
+
+
+wordViz
+```
+
+```{r}
+
+print(paste("Average Number of Words in Title:", mean(num_words), sep=" "))
+
+```
+
+
+
+```{r}
+
+#TEXT WORD LENGTH
+
+
+num_words_text <- vector()
+count <- 1
+for(i in df$text){
+
+    num_words_text[count] = sapply(strsplit(i, " "), length)
+
+
+    count = count + 1
+
+}
+
+count_df_text = data.frame(num_words_text)
+names(count_df_text) = c("Word")
+
+
+wordViz <- ggplot(data = count_df_text, aes(x = Word)) +
+       geom_histogram(binwidth=2000, color="black") +
+       ggtitle("Number of Words Distribution (Text)")
+
+
+wordViz
+```
+
+```{r}
+
+print(paste("Average Number of Words in Text:", mean(num_words_text), sep=" "))
+```
+
+```{r}
+
+
+labelViz <- ggplot(data=df, aes(x=label)) +
+       geom_histogram(binwidth=1, fill="lightblue", color="black") +
+       ggtitle("Survived Distribution")
+
+labelViz
+```

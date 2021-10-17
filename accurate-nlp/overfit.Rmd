@@ -1,0 +1,43 @@
+
+```{r}
+
+library(dplyr)
+library(readr)
+library(ggplot2)
+
+```
+
+
+```{r}
+df <- read_csv("results/overfit.csv")
+```
+
+
+```{r}
+
+head(df)
+```
+
+
+```{r}
+
+lossPlot <- ggplot(data=df, aes(x=as.numeric(row.names(df)), y=val_loss)) +
+        geom_point() +
+        geom_line() +
+        ggtitle("Loss vs. Epochs") +
+        xlab("Epochs") +
+        ylab("Loss")
+
+lossPlot
+```
+
+```{r}
+accuracyPlot <- ggplot(data=df, aes(x=as.numeric(row.names(df)), y=val_accuracy)) +
+        geom_point() +
+        geom_line() +
+        ggtitle("Accuracy vs. Epochs") +
+        xlab("Epochs") +
+        ylab("Accuracy")
+
+accuracyPlot
+```
