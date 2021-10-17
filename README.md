@@ -58,8 +58,8 @@ The Natural Language Processing aspect of this project is one of the most critic
 First, the raw data is analyzed using data science approaches and cleaned so that it can be processed by the model. Then, all the titles are converted using a PorterStemmer and Stopwords to ensure only the most meaningful words are there. The data are one hot encoded and then trained through a Deep Learning model with an Embedding, LSTM, and numerous Dense layers.
 
 ```bash
-sudo pip3 -r requirements.txt
-python3 optimal.py
+pip install tensorflow termcolor pandas sklearn nltk
+py optimal.py
 
 # View the help message for invocation.
 ```
