@@ -13,7 +13,7 @@ No longer will you be forced to discern truth from fiction! Thanks to NLP and Ps
   <a href="#what-it-does">What it does</a> •
   <a href="#how-we-built-it">How we built it</a> •
   <a href="#challenges-we-ran-into">Challenges we ran into</a> •
-  <a href="#accomplishments-that-were-proud-of">Accomplishments that we're proud of</a> •
+  <a href="#accomplishments-that-were-proud-of">Accomplishments</a> •
   <a href="#what-we-learned">What we learned</a> 
 </p>
 
