@@ -110,7 +110,7 @@ Whats the point of a backend without a front end‽ This is hosted on a server t
 * Figma
 
 ```bash
-python -m pip install tensorflow nltk --user
+python -m pip install tensorflow nltk flask --user
 python backend/server.py
 # Open the URL where it's running.
 ```
