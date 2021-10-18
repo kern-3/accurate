@@ -40,7 +40,7 @@ body {
   transition: left 300ms;
   display: flex;
   align-items: center;
-  border-right: 1px solid #c5c5c5;
+  border-right: 1px solid #d6d6d6;
 }
 
 .logo img {
