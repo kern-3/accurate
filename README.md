@@ -114,17 +114,23 @@ cd web
 # Open the index.html file
 ```
 # Challenges we ran into
-One issue we encountered was obtaining the enormous amount of data we required. We concluded that using already gathered data would be against the spirit of the competition, so we opted to collect our own. We discovered that Web Scraping Twitter was the ideal tool for the job because of a combination of incredibly fast networking rates and a highly parallel processor.
+* One of the most significant challenges we faced during the hackathon was a *13-hour power outage* at one of our teammates' location, which prevented us from progressing because we needed data that he had to provide for further predicting the outcomes from that data and aggregating it, as well as connecting the frontend, backend, and model, but it's something no one could avoid.
+* Also one of the issues we encountered was obtaining the enormous amount of data we required. We concluded that using already gathered data would be against the spirit of the competition, so we opted to collect our own. We discovered that Web Scraping Twitter was the ideal tool for the job because of a combination of incredibly fast networking rates and a highly parallel processor.
 
 # Accomplishments that we're proud of
-This is our (kern3’s) first project ! As a result, we're pleased to be capable of doing anything like this. We're also pleased with how we divided the tasks among ourselves which turned out to be very efficient.
+* This is our ([kern3’s](https://github.com/kern-3)) first project ! As a result, we're pleased to be capable of doing anything like this. We're also pleased with how we divided the tasks among ourselves which turned out to be very efficient.
+* We successfully finished with the model and were able to achieve 92% model accuracy on test data, which we were pleased with given the obstacles and time constraints.
+* Pleased with the website's visual design.
+* We were ecstatic since we were able to work with a variety of languages and technologies from various fields and link them together to create Accurate.
 
 # What we learned
-We got a lot of experience in how to aggregate data, and how to connect different systems together, especially with so many different languages interacting with each other.
+* We got a lot of experience in how to aggregate data, and how to connect different systems together, especially with so many different languages interacting with each other.
+* We all learned a lot about how to interact in reasonably large and complicated projects because this was our first/second hackathon, and we had a great time working in our team.
 
 # What's next for Accurate 
-Given the time (and possible financial backing), we would love to package this technology into a browser extension, for easier, inline, and informed social media interaction.
-We'd also like to expand our reach to various social media sites and check for the accuracy of the information shared there too.
+* Given the time (and possible financial backing), we would love to package this technology into a browser extension, for easier, inline, and informed social media interaction.
+* We'd also like to expand our reach to various social media sites and check for the accuracy of the information shared there too.
+
 
 # Hackathon
 This project was created with ❤️ for the _2021 Treasure Hacks Hackathon_.
