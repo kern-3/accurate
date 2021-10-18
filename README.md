@@ -110,8 +110,9 @@ Whats the point of a backend without a front end‽ This is hosted on a server t
 * Figma
 
 ```bash
-cd frontend
-# Open the index.html file
+python -m pip install tensorflow nltk --user
+python backend/server.py
+# Open the URL where it's running.
 ```
 # Challenges we ran into
 * One of the most significant challenges we faced during the hackathon was a *13-hour power outage* at one of our teammates' location, which prevented us from progressing because we needed data that he had to provide for further predicting the outcomes from that data and aggregating it, as well as connecting the frontend, backend, and model, but it's something no one could avoid.
