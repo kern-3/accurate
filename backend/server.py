@@ -19,7 +19,7 @@ VOCAB = 10000
 PAD_LENGTH=25
 
 
-model = tensorflow.keras.models.load_model("web/model.h5")
+model = tensorflow.keras.models.load_model("backend/model.h5")
 
 
 
