@@ -110,7 +110,7 @@ Whats the point of a backend without a front end‽ This is hosted on a server t
 * Figma
 
 ```bash
-cd web
+cd frontend
 # Open the index.html file
 ```
 # Challenges we ran into
