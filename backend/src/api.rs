@@ -1,5 +1,9 @@
+#[allow(unused_imports)]
+
 use std::convert::Infallible;
 use std::net::SocketAddr;
+use std::os::unix::net::UnixStream;
+use std::io::prelude::*;
 
 use serde::{Serialize, Deserialize};
 use log::{debug, info, error};
@@ -70,10 +74,42 @@ async fn client_dispatch(req: Request<Body>) -> Result<Response<Body>, hyper::Er
 
             debug!("Got OK request (in theory): {:?}", uri);
 
-            // Run the sentiment analysis
+            // Run the sentiment analysis (IPC to tensortalk over unix sockets)
+            debug!("Connecting to tensortalk");
+            let mut ipc_stream = match UnixStream::connect("/tmp/tensortalk-accurate.s") { 
+                Ok(s) => s,
+                Err(e) => {
+                    error!("Failed to connect to tensortalk unix socket. Is it runing? {}", e);
+                    return Ok(Response::builder().status(StatusCode::INTERNAL_SERVER_ERROR).body(Body::from("Tensortalk connection failed")).unwrap());
+                }
+            };
+
+            debug!("Querying tensortalk");
+            match ipc_stream.write_all(uri.q.as_bytes()) {
+                Ok(()) => (),
+                Err(e) => {
+                    error!("Failed to write to tensortalk unix socket. {}", e);
+                    return Ok(Response::builder().status(StatusCode::INTERNAL_SERVER_ERROR).body(Body::from("Tensortalk write failed")).unwrap());
+                }
+            };
+
+            debug!("Listening to tensortalk");
+            let mut string_accuracy = String::new();
+            match ipc_stream.read_to_string(&mut string_accuracy) {
+                Ok(_) => (),
+                Err(e) => {
+                    error!("Failed to read from tensortalk unix socket. {}", e);
+                    return Ok(Response::builder().status(StatusCode::INTERNAL_SERVER_ERROR).body(Body::from("Tensortalk read failed")).unwrap());
+                }
+            };
+
+            // Calculate percentage
+            let float_accuracy: f64 = string_accuracy.parse().unwrap();
+            let percent_accuracy: u8 = (float_accuracy * 100.0) as u8;
 
             // Respond
-            let response = serde_json::to_string(&QueryResponse::new(42)).unwrap();
+            info!("Rating: {}", percent_accuracy);
+            let response = serde_json::to_string(&QueryResponse::new(percent_accuracy)).unwrap();
             Ok(Response::builder().status(StatusCode::OK).body(Body::from(response)).unwrap())
         },
 
