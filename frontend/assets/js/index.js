@@ -7,9 +7,7 @@ function check_textarea() {
 
     console.log("Querying server about:\n" + input);
 
-    // let response = fetch(backend_ip + "/query?q=" + encodeURI(input));
-    // lets fake it for now
-    let response = "{\"p\": 69}";
+    let response = fetch(backend_ip + "/query?q=" + encodeURI(input));
 
     let json = JSON.parse(response);
 
