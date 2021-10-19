@@ -62,8 +62,8 @@ body {
 
 /* Hashtag Box 1 */
 .hashBox1 {
-  width: 58%; */
-  background: #52ff4f2e;
+  width: 58%; 
+  background: #7cff7a2e;
   padding: 55px;
   border-radius: 30px;
   min-height: 35vh;
@@ -77,7 +77,6 @@ body {
   text-align: left;
   font-weight: 600;
   color: #000;
-  margin-left: 8px;
   letter-spacing: -0.04rem;
   margin-bottom: 15px;
 }
@@ -223,7 +222,7 @@ body {
   top: 50px;
   right: 70px;
   min-height: 77.7vh;
-  width: 25%;
+  width: 30%;
   border-radius: 25px;
   background-color: #ffffe1;
   border: 1px solid #e0e0a1;
@@ -250,7 +249,7 @@ body {
   line-height: 130px;
   text-align: center;
   margin-top: 10px;
-  margin-left: 10px;
+  margin-left: 25px;
   position: absolute;
   z-index: 100;
   font-weight: 700;
