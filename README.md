@@ -6,6 +6,12 @@
   <br>
 </h1>
 
+## NOTE!
+
+Ever since "rapid unplaned disasemble" of the backend engineer's computers understanding of it's own disk, we were forced to give up the Twitter part of our project. Currently, it is just a tool to interface with a backend that deals solely in Sentiment Analysis. We have left the README as-is below, so you can get a glimpse of what we almost accomplished if it wasn't for Rocky Mountain Power (thats right, I called them out. Fight me).
+
+## END OF NOTE!
+
 No longer will you be forced to discern truth from fiction! Thanks to NLP and Psychology, now you can sit back, relax, and rest easy knowing <b>Accurate</b>, a tool which is keeping you correctly informed by assisting you in determining what is trustworthy and what is not.
 <br>
 <p align="center">
