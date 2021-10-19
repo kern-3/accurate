@@ -10,6 +10,18 @@
 
 We were compelled to abandon the Twitter portion of our project after the "rapid unplanned disassembly" of the backend engineer's computer's disc. At the moment, it's just a tool for interacting with a backend that specialises in sentiment analysis. We've left the README in its current state below so you can see what we were close to accomplishing if it weren't for Rocky Mountain Power (thats right, I called them out. Fight me).
 
+<br>
+
+**The reason why we don’t have a full-fledged website isn’t because of a faulty backend or a faulty front end but rather it’s a connectivity issue between the two.**
+<br>
+Cross-Origin Resource Sharing (CORS). CORS is a standardization of HTTP headers that specifies the origin of the sender (e.g. the domain). The purpose of CORS is to let the browser know if it should permit the loading resource. CORS only works over HTTP (unencrypted HTTPS). The website is HTTPS, but the API is not (HTTP).
+<br>
+CORS disallows the loading of HTTP resources from HTTPS, which means we can’t use our API (fully-working) from our frontend. There are three ways we could get around this:
+* Disable browser safety and protection, which is is impossible for obvious reasons.
+* Get the API an SSL certificate (thus allowing for HTTPS). Also impossible (it would require changing IP routing tables over SSH on a remote server; synonym for a bad idea).
+* Get the API and the Frontend under the same domain. The last idea, get them under the same domain. We cannot do this because we do not own the domain we use (we use Netlify”).
+
+
 ## END OF NOTE!
 
 No longer will you be forced to discern truth from fiction! Thanks to NLP and Psychology, now you can sit back, relax, and rest easy knowing <b>Accurate</b>, a tool which is keeping you correctly informed by assisting you in determining what is trustworthy and what is not.
