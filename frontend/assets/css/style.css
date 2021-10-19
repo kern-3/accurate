@@ -62,7 +62,7 @@ body {
 
 /* Hashtag Box 1 */
 .hashBox1 {
-  width: 500px;
+  width: 58%; */
   background: #52ff4f2e;
   padding: 55px;
   border-radius: 30px;
@@ -150,7 +150,7 @@ body {
   margin: auto;
 }
 .inputBox {
-  width: 1063px;
+  width: 55%;
   background: rgb(230 234 255);
   padding: 55px;
   border-radius: 30px;
@@ -191,7 +191,7 @@ body {
   border: 1px solid rgb(93 107 181 / 28%);
 }
 
-.inputBoxContent ul input {
+.inputBoxContent ul textarea {
   flex: 1;
   padding: 5px;
   border: none;
@@ -223,7 +223,7 @@ body {
   top: 50px;
   right: 70px;
   min-height: 77.7vh;
-  width: 570px;
+  width: 25%;
   border-radius: 25px;
   background-color: #ffffe1;
   border: 1px solid #e0e0a1;

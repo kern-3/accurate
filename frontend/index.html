@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="assets/img/logo.png" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <script href="assets/js/index.js"></script>
     <title>Accurate</title>
   </head>
 
@@ -23,62 +24,31 @@
         <!-- Hash Box 1 -->
         <div class="hashBox1">
           <div class="title">
-            <h2>Most Trustworthy Hashtags</h2>
+            <h2>Project notes</h2>
           </div>
-          <div class="contentBox1">
-            <ul>
-              <p class="codeBlock">#Hashtag</p>
-              <p class="codeBlock">#Hashtag</p>
-              <p class="codeBlock">#Hashtag</p>
-              <p class="codeBlock">#Hashtag</p>
-              <p class="codeBlock">#Hashtag</p>
-            </ul>
-          </div>
-        </div>
-        <!-- Hash Box 2 -->
-        <div class="hashBox2">
-          <div class="title">
-            <h2>Least Trustworthy Hashtags</h2>
-          </div>
-          <div class="contentBox2">
-            <ul>
-              <p class="codeBlock">#Hashtag</p>
-              <p class="codeBlock">#Hashtag</p>
-              <p class="codeBlock">#Hashtag</p>
-              <p class="codeBlock">#Hashtag</p>
-              <p class="codeBlock">#Hashtag</p>
-            </ul>
+          <div class="hashBoxContent">
+              <p>Due to unforceen disk-corrution (on behalf of the backend and tweat scraping developer), our projects focus has since shifted. No longer are we taking data from Twitter, nor are we giving you trust information about the platform. Instead, it uses Sentiment Processing without Twitter to figure out how accurate a source is. While this is not as accurate as our original goal, it still gets the job done.</p>
           </div>
         </div>
       </div>
     </div>
-    <!-- Post Input Form -->
 
+    <!-- Post Input Form -->
     <div class="inputBox">
       <div class="inputBoxTitle">
-        <h2>Enter a Post</h2>
+        <h2>Enter some text</h2>
       </div>
       <div class="inputBoxContent">
         <ul>
-          <input
-            type="url"
+          <textarea
+            type="text"
             id="post-inp"
             name="post-inp"
             class="inputArea"
-            placeholder="Enter the Post here"
-          />
+            placeholder="Don't worry, your text is processed automagically (this may take a second or two)!"
+            onkeyup="check_textarea();"
+            /></textarea>
         </ul>
-        <div>
-          <button
-            type="submit"
-            form="form1"
-            value="Submit"
-            class="submitButton"
-            style="float: right"
-          >
-            Submit
-          </button>
-        </div>
       </div>
     </div>
 
@@ -87,7 +57,10 @@
       <div class="accuracySection">
         <h1 class="accuracySectionHead">Accuracy Percentage</h1>
         <div class="circle" style="margin-left: 190px">
-          <div class="percentage">70%</div>
+          <div id="accuracy-rating" class="percentage">70%</div>
+        </div>
+        <div style="margin-top: 50% !important; margin: 10%" class="sideBarContent">
+            <p>Some information has been left out of this section. See thie notes for more inforamtion. Ideally, we would give you similar sources here, along with some metadata we collected.</p>
         </div>
       </div>
     </aside>
