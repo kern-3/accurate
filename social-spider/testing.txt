@@ -1,2 +1,0 @@
-https://twitter.com/i/api/graphql/Vwkjj-4-TWRBblnhvaXyhQ/TweetDetail\?variables\=\{%22focalTweetId%22:%221448770842091995140%22,%22with_rux_injections%22:true,%22includePromotedContent%22:true,%22withCommunity%22:true,%22withTweetQuoteCount%22:true,%22withBirdwatchNotes%22:false,%22withSuperFollowsUserFields%22:true,%22withUserResults%22:true,%22withBirdwatchPivots%22:false,%22withReactionsMetadata%22:false,%22withReactionsPerspective%22:false,%22withSuperFollowsTweetFields%22:true,%22withVoice%22:true\}
-https://twitter.com/UN/status/1448770842091995140\?s\=20
