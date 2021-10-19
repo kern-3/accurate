@@ -8,7 +8,7 @@
 
 ## NOTE!
 
-Ever since "rapid unplaned disasembly" of the backend engineer's computers understanding of it's own disk, we were forced to give up the Twitter part of our project. Currently, it is just a tool to interface with a backend that deals solely in Sentiment Analysis. We have left the README as-is below, so you can get a glimpse of what we almost accomplished if it wasn't for Rocky Mountain Power (thats right, I called them out. Fight me).
+We were compelled to abandon the Twitter portion of our project after the "rapid unplanned disassembly" of the backend engineer's computer's disc. At the moment, it's just a tool for interacting with a backend that specialises in sentiment analysis. We've left the README in its current state below so you can see what we were close to accomplishing if it weren't for Rocky Mountain Power (thats right, I called them out. Fight me).
 
 ## END OF NOTE!
 
